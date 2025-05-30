@@ -15,4 +15,4 @@ jobs:
         run: docker build -t andriihalai/docker-react:latest -f Dockerfile.dev .
 
       - name: Run tests
-        run: docker run --rm andriihalai/docker-react:latest npm test
+        run: docker run -e CI=true --rm andriihalai/docker-react:latest npm test
